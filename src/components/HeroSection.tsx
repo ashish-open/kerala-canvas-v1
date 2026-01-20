@@ -22,7 +22,7 @@ export default function HeroSection() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/4k-aerial-top-down-drone-shot-of-a-25-year-old-ind-2025-12-17-20-40-47-utc.mp4" type="video/mp4" />
+          <source src="https://mtewbu7drwvwryog.public.blob.vercel-storage.com/Videos/4k-aerial-top-down-drone-shot-of-a-25-year-old-ind-2025-12-17-20-40-47-utc.mp4" type="video/mp4" />
         </video>
 
         {/* Gradient Overlay */}
