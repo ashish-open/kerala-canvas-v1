@@ -46,7 +46,7 @@ export default function DonationCTA() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               to="/donate"
-              className="group inline-flex items-center gap-3 px-8 py-4 bg-accent text-accent-foreground font-semibold rounded-full shadow-gold hover:shadow-lg transition-all duration-300 hover:scale-105"
+              className="group inline-flex items-center gap-3 px-8 py-4 bg-accent text-accent-foreground font-semibold rounded-full shadow-md hover:shadow-gold hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
               Make a Donation
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />

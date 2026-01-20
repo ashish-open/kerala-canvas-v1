@@ -104,7 +104,7 @@ export default function HeroSection() {
           >
             <Link
               to="/events"
-              className="group inline-flex items-center gap-3 px-8 py-4 bg-accent text-accent-foreground font-semibold rounded-full shadow-gold hover:shadow-lg transition-all duration-300 hover:scale-105"
+              className="group inline-flex items-center gap-3 px-8 py-4 bg-accent text-accent-foreground font-semibold rounded-full shadow-md hover:shadow-gold hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
               Explore Events
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
