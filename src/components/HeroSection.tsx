@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-kerala.jpg";
+
 
 export default function HeroSection() {
   const { scrollY } = useScroll();
@@ -9,31 +9,24 @@ export default function HeroSection() {
   const opacity = useTransform(scrollY, [0, 400], [1, 0]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Parallax & Slow Zoom */}
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Background Video */}
       <motion.div
         style={{ y }}
         className="absolute inset-0 z-0"
       >
-        <motion.div
-          initial={{ scale: 1.15 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 10, ease: "easeOut" }}
-          className="w-full h-full"
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
         >
-          <img
-            src={heroImage}
-            alt="Kerala backwaters at sunset"
-            className="w-full h-[120%] object-cover object-center"
-          />
-        </motion.div>
+          <source src="/4k-aerial-top-down-drone-shot-of-a-25-year-old-ind-2025-12-17-20-40-47-utc.mp4" type="video/mp4" />
+        </video>
 
-        {/* Breathing Gradient Overlay */}
-        <motion.div
-          className="absolute inset-0 hero-overlay"
-          animate={{ opacity: [0.8, 0.9, 0.8] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-        />
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-black/40" />
       </motion.div>
 
       {/* Animated grain overlay */}
@@ -42,11 +35,11 @@ export default function HeroSection() {
       {/* Content */}
       <motion.div
         style={{ opacity }}
-        className="relative z-20 container mx-auto px-4 lg:px-8 text-center"
+        className="relative z-20 container px-4 lg:px-8 text-left"
       >
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl">
           {/* Badge - Slide Up */}
-          <div className="overflow-hidden mb-8 flex justify-center">
+          <div className="overflow-hidden mb-8 inline-block">
             <motion.div
               initial={{ y: "100%", opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -97,7 +90,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.9, ease: "easeOut" }}
-            className="text-lg sm:text-xl md:text-2xl text-primary-foreground/80 font-light mb-10 max-w-2xl mx-auto"
+            className="text-lg sm:text-xl md:text-2xl text-primary-foreground/80 font-light mb-10 max-w-2xl"
           >
             Celebrating culture, community, and compassion since 1987
           </motion.p>
@@ -107,7 +100,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.1, ease: "easeOut" }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            className="flex flex-col sm:flex-row items-start gap-4"
           >
             <Link
               to="/events"
